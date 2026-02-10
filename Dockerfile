@@ -10,6 +10,7 @@ WORKDIR /app/
 RUN pip install --upgrade pip setuptools
 ENV COOKIES_FILE_PATH="/modules/youtube_cookies.txt"
 
-CMD gunicorn app:app
+CMD gunicorn app:app --bind 0.0.0.0:8000
+
 
 
